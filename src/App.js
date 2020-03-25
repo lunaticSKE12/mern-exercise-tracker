@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navbar from "./components/navbar";
@@ -10,7 +10,7 @@ import CreateUser from "./components/create-user";
 
 function App() {
   return (
-    <Switch>
+    <BrowserRouter>
       <div className="container">
         <Navbar />
         <br />
@@ -19,8 +19,8 @@ function App() {
         <Route path="/create" component={CreateExercise} />
         <Route path="/user" component={CreateUser} />
       </div>
-    </Switch>
+    </BrowserRouter>
   );
 }
 
-export default withRouter(App);
+export default App;

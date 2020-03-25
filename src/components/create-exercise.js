@@ -24,6 +24,8 @@ export default class CreateExercise extends Component {
             username: response.data[0].username
           });
         }
+      }).catch((error) => {
+        console.log(error);
       })
   }
 
